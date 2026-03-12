@@ -30,6 +30,7 @@ class ProductControler extends Controller
            $imgPath = $request->file('image')->store('images','public');
         }
         $product = Product::create([
+            'name' => $validatedData['name'],
             
         ]);
     }
