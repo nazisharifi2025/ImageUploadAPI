@@ -22,7 +22,7 @@ class ProductControler extends Controller
         $request->validate([
             'name' => 'required|string',
             'price' => 'required|numeric',
-            
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
     }
 
