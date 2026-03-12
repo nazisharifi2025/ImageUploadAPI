@@ -50,7 +50,7 @@ class ProductControler extends Controller
            $product = Product::findOrfail($id);
            return response()->json($product);
         }
-        catch(Exception $err){
+        catch(\Exception $err){
             return response()->json([
                 "message"=> $err
             ]);
