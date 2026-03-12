@@ -36,7 +36,9 @@ class ProductControler extends Controller
             'image_path' => $imgPath,
         ]);
         return response()->json($product, 201);
-        } 
+        } catch (\Exception $e) {
+            
+        }
     }
 
     /**
