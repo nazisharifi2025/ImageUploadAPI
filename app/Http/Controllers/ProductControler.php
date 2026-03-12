@@ -24,9 +24,9 @@ class ProductControler extends Controller
             'price' => 'required|numeric',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-        $img_path = "";
+        $imgPath = "";
         if($request->hasFile('image')) {
-           
+           $imgPath = $request->file('image')->store('images','public');
         }
     }
 
