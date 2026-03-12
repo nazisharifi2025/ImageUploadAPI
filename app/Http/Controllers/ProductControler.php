@@ -47,8 +47,9 @@ class ProductControler extends Controller
     public function show(string $id)
     {
         try{
-
-        }catch(Exception $err){
+            Product::findOrfail($id);
+        }
+        catch(Exception $err){
             return response()->json([
                 "message"=> $err
             ]);
