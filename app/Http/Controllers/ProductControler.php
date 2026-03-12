@@ -47,7 +47,8 @@ class ProductControler extends Controller
     public function show(string $id)
     {
         try{
-            Product::findOrfail($id);
+           $product = Product::findOrfail($id);
+           
         }
         catch(Exception $err){
             return response()->json([
