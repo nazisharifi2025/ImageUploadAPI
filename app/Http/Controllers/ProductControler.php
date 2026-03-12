@@ -48,7 +48,7 @@ class ProductControler extends Controller
     {
         try{
            $product = Product::findOrfail($id);
-           
+           return response()->json($product);
         }
         catch(Exception $err){
             return response()->json([
