@@ -48,7 +48,11 @@ class ProductControler extends Controller
     {
         try{
 
-        }catch(Exiption $err){}
+        }catch(Exception $err){
+            return response()->json([
+                "message"=> $err
+            ]);
+        }
     }
 
     /**
