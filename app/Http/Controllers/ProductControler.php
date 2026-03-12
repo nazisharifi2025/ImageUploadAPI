@@ -37,7 +37,7 @@ class ProductControler extends Controller
         ]);
         return response()->json($product, 201);
         } catch (\Exception $e) {
-            
+            return response()->json(['error' => 'Failed to create product', 'message' => $e->getMessage()], 500);
         }
     }
 
