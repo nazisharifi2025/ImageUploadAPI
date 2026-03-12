@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductControler extends Controller
@@ -28,6 +29,9 @@ class ProductControler extends Controller
         if($request->hasFile('image')) {
            $imgPath = $request->file('image')->store('images','public');
         }
+        $product = Product::create([
+            
+        ]);
     }
 
     /**
