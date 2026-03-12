@@ -34,6 +34,7 @@ class ProductControler extends Controller
             'price' => $validatedData['price'],
             'image_path' => $imgPath,
         ]);
+        return response()->json($product, 201);
     }
 
     /**
