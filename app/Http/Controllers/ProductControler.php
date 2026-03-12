@@ -25,6 +25,9 @@ class ProductControler extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
         $img_path = "";
+        if($request->hasFile('image')) {
+           
+        }
     }
 
     /**
