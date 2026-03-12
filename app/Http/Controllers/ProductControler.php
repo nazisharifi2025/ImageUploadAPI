@@ -20,6 +20,7 @@ class ProductControler extends Controller
      */
     public function store(Request $request)
     {
+        try {
        $validatedData = $request->validate([
             'name' => 'required|string',
             'price' => 'required|numeric',
@@ -35,6 +36,7 @@ class ProductControler extends Controller
             'image_path' => $imgPath,
         ]);
         return response()->json($product, 201);
+        } 
     }
 
     /**
