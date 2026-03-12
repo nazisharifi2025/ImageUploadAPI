@@ -31,6 +31,7 @@ class ProductControler extends Controller
         }
         $product = Product::create([
             'name' => $validatedData['name'],
+            'price' => $validatedData['price'],
             
         ]);
     }
