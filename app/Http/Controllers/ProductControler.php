@@ -46,7 +46,9 @@ class ProductControler extends Controller
      */
     public function show(string $id)
     {
-        //
+        try{
+
+        }catch(Exiption $err){}
     }
 
     /**
