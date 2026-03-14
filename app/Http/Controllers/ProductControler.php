@@ -64,7 +64,7 @@ class ProductControler extends Controller
     {
         $request->validate([
             "name"=> "nullable|string|min:4|max:20",
-            "price"=> "nullable|decimal:50,5000"
+            "price"=> "nullable|decimal:50,5000|numeric"
         ]);
     }
 
