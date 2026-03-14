@@ -67,6 +67,7 @@ class ProductControler extends Controller
             "price"=> "nullable|decimal:50,5000|numeric",
             "image"=> "nullable|image|mimes:png,jpg,gpeg,gif"
         ]);
+        $product = product::findOrFail($id);
     }
 
     /**
