@@ -72,8 +72,9 @@ class ProductControler extends Controller
         $product->price = $valedtedData["price"];
         $imagePath = "";
         if($request->hasFile("image")){
-            $imagePath = $valedtedData->file('image')->store('images', 'public');
+            $imagePath = $request->file('image')->store('images', 'public');
         }
+        $product->update();
     }
 
     /**
