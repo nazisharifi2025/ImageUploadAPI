@@ -71,7 +71,9 @@ class ProductControler extends Controller
         $product->name = $valedtedData["name"];
         $product->price = $valedtedData["price"];
         $imagePath = "";
-        
+        if($valedtedData->hasFile("image")){
+
+        }
     }
 
     /**
