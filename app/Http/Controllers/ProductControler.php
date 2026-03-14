@@ -63,7 +63,7 @@ class ProductControler extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            ""
+            "name"=> "nullable|string|min:4|max:20",
         ]);
     }
 
