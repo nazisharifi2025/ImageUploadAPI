@@ -62,7 +62,7 @@ class ProductControler extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $request->validate([
+        $valedtedData = $request->validate([
             "name"=> "nullable|string|min:4|max:20",
             "price"=> "nullable|decimal:50,5000|numeric",
             "image"=> "nullable|image|mimes:png,jpg,gpeg,gif"
