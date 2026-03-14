@@ -75,6 +75,11 @@ class ProductControler extends Controller
             $imagePath = $request->file('image')->store('images', 'public');
         }
         $product->update();
+        return response()->json(
+            [
+                "data"=> $product ,
+            ]
+        );
     }
 
     /**
