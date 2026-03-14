@@ -68,6 +68,7 @@ class ProductControler extends Controller
             "image"=> "nullable|image|mimes:png,jpg,gpeg,gif"
         ]);
         $product = product::findOrFail($id);
+        $product->name = $validatedData["name"]
     }
 
     /**
